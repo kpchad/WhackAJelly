@@ -8,25 +8,24 @@
 
 import UIKit
 import ARKit
-
 class ViewController: UIViewController {
-
-    @IBOutlet weak var sceneView: ARSCNView!
-    let configureation = ARWorldTrackingConfiguration()
+    
+    @IBOutlet weak var SceneView: ARSCNView!
+    let configuration = ARWorldTrackingConfiguration()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
-        self.sceneView.session.run(configureation)
-        let tapGeuestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
-        self.sceneView.addGestureRecognizer(tapGeuestureRecognizer)
+        self.SceneView.debugOptions = [ARSCNDebugOptions.showWorldOrigin, ARSCNDebugOptions.showFeaturePoints]
+        self.SceneView.session.run(configuration)
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        self.SceneView.addGestureRecognizer(tapGestureRecognizer)
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     @IBAction func play(_ sender: Any) {
         self.addNode()
     }
@@ -34,13 +33,13 @@ class ViewController: UIViewController {
     @IBAction func reset(_ sender: Any) {
     }
     
-    func addNode(){
-        let node = SCNNode(geometry: SCNBox(width: 0.2, height: 0.2, length: 0.2, chamferRadius: 0))
-        node.position = SCNVector3(0,0,-1)
-        node.geometry?.firstMaterial?.diffuse.contents = UIColor.black
-        self.sceneView.scene.rootNode.addChildNode(node)
+    func addNode() {
+        let jellyFishScene = SCNScene(named: "art.scnassets/Jellyfish.scn")
+        let jellyfishNode = jellyFishScene?.rootNode.childNode(withName: "Jelly", recursively: false)
+        jellyfishNode?.position = SCNVector3(0,0,-1)
+        
+        self.SceneView.scene.rootNode.addChildNode(jellyfishNode!)
     }
-    
     @objc func handleTap(sender: UITapGestureRecognizer) {
         let sceneViewTappedOn = sender.view as! SCNView
         let touchCoordinates = sender.location(in: sceneViewTappedOn)
@@ -53,6 +52,4 @@ class ViewController: UIViewController {
             print(geometry!)
         }
     }
-    
 }
-

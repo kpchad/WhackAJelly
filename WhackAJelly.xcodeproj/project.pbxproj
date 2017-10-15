@@ -12,6 +12,7 @@
 		0B6297071F9073D9009A17E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B6297051F9073D9009A17E8 /* Main.storyboard */; };
 		0B6297091F9073D9009A17E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B6297081F9073D9009A17E8 /* Assets.xcassets */; };
 		0B62970C1F9073D9009A17E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B62970A1F9073D9009A17E8 /* LaunchScreen.storyboard */; };
+		0B6297181F913C96009A17E8 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B6297171F913C96009A17E8 /* art.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		0B6297081F9073D9009A17E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B62970B1F9073D9009A17E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B62970D1F9073D9009A17E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B6297171F913C96009A17E8 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		0B6297271F916A0F009A17E8 /* Jellyfish.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = Jellyfish.scn; path = art.scnassets/Jellyfish.scn; sourceTree = "<group>"; };
+		0B6297291F93F530009A17E8 /* Textures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Textures; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +58,15 @@
 		0B6297001F9073D9009A17E8 /* WhackAJelly */ = {
 			isa = PBXGroup;
 			children = (
+				0B6297291F93F530009A17E8 /* Textures */,
+				0B6297271F916A0F009A17E8 /* Jellyfish.scn */,
 				0B6297011F9073D9009A17E8 /* AppDelegate.swift */,
 				0B6297031F9073D9009A17E8 /* ViewController.swift */,
 				0B6297051F9073D9009A17E8 /* Main.storyboard */,
 				0B6297081F9073D9009A17E8 /* Assets.xcassets */,
 				0B62970A1F9073D9009A17E8 /* LaunchScreen.storyboard */,
 				0B62970D1F9073D9009A17E8 /* Info.plist */,
+				0B6297171F913C96009A17E8 /* art.scnassets */,
 			);
 			path = WhackAJelly;
 			sourceTree = "<group>";
@@ -124,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B62970C1F9073D9009A17E8 /* LaunchScreen.storyboard in Resources */,
+				0B6297181F913C96009A17E8 /* art.scnassets in Resources */,
 				0B6297091F9073D9009A17E8 /* Assets.xcassets in Resources */,
 				0B6297071F9073D9009A17E8 /* Main.storyboard in Resources */,
 			);
