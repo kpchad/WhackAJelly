@@ -13,6 +13,7 @@
 		0B6297091F9073D9009A17E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B6297081F9073D9009A17E8 /* Assets.xcassets */; };
 		0B62970C1F9073D9009A17E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B62970A1F9073D9009A17E8 /* LaunchScreen.storyboard */; };
 		0B6297181F913C96009A17E8 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B6297171F913C96009A17E8 /* art.scnassets */; };
+		35BCF38B2F9A4B86973AA634 /* Pods_WhackAJelly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29BE43DBCC4C65AEB834FB86 /* Pods_WhackAJelly.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +26,10 @@
 		0B62970D1F9073D9009A17E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B6297171F913C96009A17E8 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		0B6297271F916A0F009A17E8 /* Jellyfish.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = Jellyfish.scn; path = art.scnassets/Jellyfish.scn; sourceTree = "<group>"; };
-		0B6297291F93F530009A17E8 /* Textures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Textures; sourceTree = "<group>"; };
+		0B6297291F93F530009A17E8 /* Textures */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Textures; path = art.scnassets/Textures; sourceTree = "<group>"; };
+		29BE43DBCC4C65AEB834FB86 /* Pods_WhackAJelly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhackAJelly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5E6EA59F86FA710065A40DC /* Pods-WhackAJelly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhackAJelly.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhackAJelly/Pods-WhackAJelly.release.xcconfig"; sourceTree = "<group>"; };
+		E298A5DEB6F29C4D2933E4E2 /* Pods-WhackAJelly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhackAJelly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhackAJelly/Pods-WhackAJelly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35BCF38B2F9A4B86973AA634 /* Pods_WhackAJelly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				0B6297001F9073D9009A17E8 /* WhackAJelly */,
 				0B6296FF1F9073D9009A17E8 /* Products */,
+				6B0AA6A1D861534C7DD3533F /* Pods */,
+				52B917241FE1A6C6DD85395F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +78,23 @@
 			path = WhackAJelly;
 			sourceTree = "<group>";
 		};
+		52B917241FE1A6C6DD85395F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29BE43DBCC4C65AEB834FB86 /* Pods_WhackAJelly.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B0AA6A1D861534C7DD3533F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E298A5DEB6F29C4D2933E4E2 /* Pods-WhackAJelly.debug.xcconfig */,
+				B5E6EA59F86FA710065A40DC /* Pods-WhackAJelly.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B6297101F9073D9009A17E8 /* Build configuration list for PBXNativeTarget "WhackAJelly" */;
 			buildPhases = (
+				7AB29CB6420187BD5CB33F62 /* [CP] Check Pods Manifest.lock */,
 				0B6296FA1F9073D9009A17E8 /* Sources */,
 				0B6296FB1F9073D9009A17E8 /* Frameworks */,
 				0B6296FC1F9073D9009A17E8 /* Resources */,
+				12E1E724C7E2E15E4AA83AA8 /* [CP] Embed Pods Frameworks */,
+				79CD28E69075AE47FCDEFE24 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,6 +165,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12E1E724C7E2E15E4AA83AA8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WhackAJelly/Pods-WhackAJelly-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Each/Each.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Each.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhackAJelly/Pods-WhackAJelly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79CD28E69075AE47FCDEFE24 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhackAJelly/Pods-WhackAJelly-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AB29CB6420187BD5CB33F62 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhackAJelly-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0B6296FA1F9073D9009A17E8 /* Sources */ = {
@@ -280,6 +361,7 @@
 		};
 		0B6297111F9073D9009A17E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E298A5DEB6F29C4D2933E4E2 /* Pods-WhackAJelly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +377,7 @@
 		};
 		0B6297121F9073D9009A17E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5E6EA59F86FA710065A40DC /* Pods-WhackAJelly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
